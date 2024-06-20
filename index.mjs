@@ -20,8 +20,8 @@ app.get('/', (req,res) => {
 })
 
 app.get('/list', async (req, res) => {
+   var final_array = [];  
   fs.readdir(AUDIO_DIR, async (err, files) => {
-    var final_array = [];
     if (err) {
        return res.status(500).json({ error: 'Unable to read audio directory' });
     }
