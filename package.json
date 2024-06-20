@@ -1,0 +1,22 @@
+{
+  "name": "audio-api",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "music-metadata": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
