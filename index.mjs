@@ -19,8 +19,8 @@ app.get('/', (req,res) => {
     res.send('Hi');
 })
 
+var final_array = [];  
 app.get('/list', async (req, res) => {
-   var final_array = [];  
   fs.readdir(AUDIO_DIR, async (err, files) => {
     if (err) {
        return res.status(500).json({ error: 'Unable to read audio directory' });
@@ -52,6 +52,7 @@ app.get('/list', async (req, res) => {
        }
     });
     await res.json(final_array);
+    final_array = [];
   });
 });
 
